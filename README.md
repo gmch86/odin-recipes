@@ -1,4 +1,3 @@
-# odin-recipes
-The Odin Project
+# The Odin Project / Odin Recipes
 
-Recipes website
+For this project I have been assigned to create a basic recipe website.
