@@ -4,24 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin Recipes</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <h1>Odin Recipes</h1>
-    <p>
-      Try our range of recipes made for home cooks who love simple, comforting
-      food. From fresh vegetables to hearty grains, Odin Recipes focuses on
-      approachable dishes that taste great without complicated steps.
-    </p>
-    <ul>
-      <li><a href="./recipes/garlic_noodles.html">Garlic Noodles</a></li>
-      <li>
-        <a href="./recipes/potato_and_mushroom_soup.html"
-          >Potato and Mushroom Soup</a
-        >
-      </li>
-      <li>
-        <a href="./recipes/farro_and_kale_salad.html">Farro and Kale Salad</a>
-      </li>
-    </ul>
+    <header>
+      <div class="odin-recipes-banner"><h1 class="placeholder">Odin Recipes</h1></div>
+      <nav class="navbar">
+        <ul>
+          <li class="home"><a href="/index.html">Home</a></li>
+          <li class="recipes"><a href="/recipes.html">Recipes</a></li>
+          <li class="about"><a href="/about.html">About</a></li>
+          <li class="contact"><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2 class="our-selection-title">Our Selection</h1>
+      <ul>
+        <li class="recipe-card">
+          <img class="recipe-img" src="" alt="Recipe Image" />
+          <div class="recipe-banner">Recipe Name</div>
+          <span class="time-to-cook">30 min.</span>
+          <span class="serve-amount">Serves 4</span>
+        </li>
+        <li class="recipe-card">
+          <img class="recipe-img" src="" alt="Recipe Image" />
+          <div class="recipe-banner">Recipe Name</div>
+          <span class="time-to-cook">30 min.</span>
+          <span class="serve-amount">Serves 4</span>
+        </li>
+        <li class="recipe-card">
+          <img class="recipe-img" src="" alt="Recipe Image" />
+          <div class="recipe-banner">Recipe Name</div>
+          <span class="time-to-cook">30 min.</span>
+          <span class="serve-amount">Serves 4</span>
+        </li>
+      </ul>
+      <h2 class="meal-of-the-week-title">Meal of the Week</h1>
+      <div class="meal-of-the-week-card">
+        <img class="recipe-img" src="" alt="Recipe Image" />
+        <div class="recipe-banner">Recipe Name</div>
+        <span class="time-to-cook">30 min.</span>
+        <span class="serve-amount">Serves 4</span>
+      </div>
+    </main>
   </body>
 </html>
