@@ -1,0 +1,107 @@
+/* INDEX.HTML */
+section.our-selection {
+  margin: 0 auto;
+  width: max-content;
+}
+
+.our-selection-heading {
+  text-align: center;
+}
+
+.recipe-card-list-container {
+  display: flex;
+}
+
+.carousel-left,
+.carousel-right {
+  align-self: center;
+  width: 50px;
+  height: min-content;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+ul.recipe-card-list {
+  padding: 0;
+  margin: 0;
+}
+
+.recipe-card-list li {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  filter: brightness(1.08) drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
+  margin: 4px;
+}
+
+.recipe-img {
+  background-color: silver;
+}
+
+.recipe-banner {
+  text-align: center;
+}
+
+.recipe-card-list .recipe-banner {
+  background-color: #860000;
+  color: white;
+  padding: 0.7em 2em;
+  font-size: 0.8em;
+  font-weight: bold;
+  letter-spacing: 0.07m;
+}
+
+.recipe-info {
+  text-align: center;
+  padding: 0.7em 0.4em;
+  font-size: 0.7em;
+}
+
+.recipe-card-list .recipe-img {
+  min-width: 100%;
+  min-height: 100px;
+}
+
+section.meal-of-the-week {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+.meal-of-the-week-heading {
+  text-align: center;
+}
+
+.meal-of-the-week-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 14px;
+  filter: brightness(1.08) drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
+  border-radius: 12px;
+}
+
+.meal-of-the-week-container .recipe-img {
+  min-width: 100%;
+  min-height: 350px;
+}
+
+.meal-of-the-week-container .recipe-banner {
+  padding: 0.7em 2em 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.meal-of-the-week-container .recipe-info {
+  font-size: 0.8em;
+}
+
+.recipe-card-list li,
+.meal-of-the-week-container {
+  background-color: #decdba;
+  background-image: url("/images/FG_TEXTURE.png");
+  background-repeat: repeat;
+  overflow: hidden;
+}

@@ -8,40 +8,55 @@ body {
   background-image: url("/images/BG_TEXTURE.png");
   background-repeat: repeat;
   height: 100vh;
+  font-family:
+    Lucida Grande,
+    Lucida Sans Unicode,
+    Lucida Sans,
+    Geneva,
+    Verdana,
+    sans-serif;
 }
 
 .fg {
   position: relative;
-  justify-self: center;
-  background-color: aqua;
+  background-color: #decdba;
   background-image: url("/images/FG_TEXTURE.png");
   background-repeat: repeat;
-  width: max-content;
-  padding: 20px;
-  margin-top: clamp(80px, 10vw, 150px);
-  padding-top: clamp(36px, 4.6vw, 74px);
+  width: 900px;
+  padding: 60px;
+  margin: 0 auto;
+  margin-top: 150px;
+  padding-top: 74px;
+  filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.6));
+  border-style: double;
+  border-color: #392012;
+  border-width: 12px;
 }
 
 .odin-recipes-banner {
   position: absolute;
-  text-align: center;
   top: 0;
   left: 50%;
   width: auto;
   height: auto;
   transform: translateY(-65%) translateX(-50%);
-  /* outline: 1px solid #000; */
 }
 
 .odin-recipes-banner img {
-  width: clamp(200px, 26vw, 400px);
+  width: 400px;
   height: auto;
 }
 
+main,
+header {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .main-navbar ul {
-  justify-self: center;
+  width: max-content;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .main-navbar ul li {
@@ -51,27 +66,16 @@ body {
   margin: 10px;
 }
 
-/* INDEX.HTML */
-.our-selection-heading {
+.main-navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+  font-weight: bold;
   text-align: center;
 }
 
-ul.recipe-card-list {
-  padding: 0;
-  margin: 0;
-}
-
-.recipe-card-list li {
-  display: inline-block;
-  list-style: none;
-  padding: 0;
-  margin: 10px;
-}
-
-.meal-of-the-week-heading {
-  text-align: center;
-}
-
-.meal-of-the-week-container {
-  justify-self: center;
+.main-navbar ul li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-thickness: 0.12em;
 }
