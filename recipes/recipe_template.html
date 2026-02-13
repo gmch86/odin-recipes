@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe Name Recipe</title>
+    <link rel="stylesheet" href="/normalize.css" />
     <link rel="stylesheet" href="/styles.css" />
     <link rel="stylesheet" href="/recipe.css" />
   </head>
@@ -21,52 +22,87 @@
           </ul>
         </nav>
       </header>
-      <a href="/index.html">Go Back</a>
-      <h1>Recipe Name</h1>
-      <p>This is a description of the recipe.</p>
-      <img src="" alt="Recipe image" width="200" />
-      <h2>Ingredients</h2>
-      <ul>
-        <li>Ingredient 1</li>
-        <li>Ingredient 2</li>
-        <li>Ingredient 3</li>
-        <li>Ingredient 4</li>
-        <li>Ingredient 5</li>
-      </ul>
-      <h2>Instructions</h2>
-      <ol>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur
-          adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae
-          pellentesque sem placerat in id. Placerat in id cursus mi pretium
-          tellus duis. Pretium tellus duis convallis tempus leo eu aenean.
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur
-          adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae
-          pellentesque sem placerat in id. Placerat in id cursus mi pretium
-          tellus duis. Pretium tellus duis convallis tempus leo eu aenean.
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur
-          adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae
-          pellentesque sem placerat in id. Placerat in id cursus mi pretium
-          tellus duis. Pretium tellus duis convallis tempus leo eu aenean.
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur
-          adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae
-          pellentesque sem placerat in id. Placerat in id cursus mi pretium
-          tellus duis. Pretium tellus duis convallis tempus leo eu aenean.
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur
-          adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae
-          pellentesque sem placerat in id. Placerat in id cursus mi pretium
-          tellus duis. Pretium tellus duis convallis tempus leo eu aenean.
-        </li>
-      </ol>
-      <a href="/index.html">Go Back</a>
+      <main>
+        <a class="return-to-home-link top" href="/index.html">Return to Home</a>
+        <h1 class="recipe-name-heading">
+          <span class="divider left"></span>Recipe Name<span
+            class="divider right"
+          ></span>
+        </h1>
+        <p class="recipe-description">This is a description of the recipe.</p>
+        <section class="ingredients-section">
+          <div class="recipe-image-container">
+            <img
+              class="recipe-img"
+              src=""
+              alt="Recipe Image"
+              width="200px"
+              height="auto"
+            />
+            <div class="recipe-info">
+              <span class="time-to-cook">215 min.</span>
+              <span class="divider"></span>
+              <span class="serve-amount">Serves 4</span>
+            </div>
+          </div>
+          <div class="ingredients-container">
+            <h2 class="ingredients-heading">Ingredients</h2>
+            <ul class="ingredients-list">
+              <li>Ingredient 1</li>
+              <li>Ingredient 2</li>
+              <li>Ingredient 3</li>
+              <li>Ingredient 4</li>
+              <li>Ingredient 5</li>
+            </ul>
+          </div>
+        </section>
+        <section class="instructions-container">
+          <h2 class="instructions-heading">
+            <span class="divider left dropshadow"></span>
+            Instructions<span class="divider right dropshadow"></span>
+          </h2>
+          <ol class="instructions-list">
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex
+              sapien vitae pellentesque sem placerat in id. Placerat in id
+              cursus mi pretium tellus duis. Pretium tellus duis convallis
+              tempus leo eu aenean.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex
+              sapien vitae pellentesque sem placerat in id. Placerat in id
+              cursus mi pretium tellus duis. Pretium tellus duis convallis
+              tempus leo eu aenean.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex
+              sapien vitae pellentesque sem placerat in id. Placerat in id
+              cursus mi pretium tellus duis. Pretium tellus duis convallis
+              tempus leo eu aenean.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex
+              sapien vitae pellentesque sem placerat in id. Placerat in id
+              cursus mi pretium tellus duis. Pretium tellus duis convallis
+              tempus leo eu aenean.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit.
+              Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex
+              sapien vitae pellentesque sem placerat in id. Placerat in id
+              cursus mi pretium tellus duis. Pretium tellus duis convallis
+              tempus leo eu aenean.
+            </li>
+          </ol>
+        </section>
+        <a class="return-to-home-link bottom" href="/index.html"
+          >Return to Home</a
+        >
+      </main>
     </div>
   </body>
 </html>
