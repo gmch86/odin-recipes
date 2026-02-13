@@ -17,6 +17,11 @@ body {
     sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: unset;
+}
+
 .fg {
   position: relative;
   color: #4a2818;
