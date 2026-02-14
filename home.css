@@ -204,7 +204,7 @@ section.meal-of-the-week {
 .meal-of-the-week-container {
   background-color: #decdba;
   background-image:
-    linear-gradient(rgba(255, 247, 237, 0.15)), url("/images/FG_TEXTURE.png");
+    linear-gradient(rgba(255, 247, 237, 0.15)), url("images/FG_TEXTURE.png");
   background-repeat: repeat;
   overflow: hidden;
 }

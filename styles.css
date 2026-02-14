@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  background-image: url("/images/BG_TEXTURE.png");
+  background-image: url("images/BG_TEXTURE.png");
   background-repeat: repeat;
   height: 100vh;
   font-family:
@@ -38,7 +38,7 @@ a {
   position: relative;
   color: #4a2818;
   background-color: #decdba;
-  background-image: url("/images/FG_TEXTURE.png");
+  background-image: url("images/FG_TEXTURE.png");
   background-repeat: repeat;
   width: 900px;
   padding: 60px;
