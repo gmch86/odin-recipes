@@ -163,11 +163,15 @@
 }
 
 /* Dividers */
-.ingredients-container::after {
+.ingredients-section {
+  position: relative;
+}
+
+.ingredients-section::before {
   content: "";
   position: absolute;
   top: 0;
-  right: calc(100% + 34px);
+  left: 50%;
   height: 100%;
   border-left: 2px solid;
   border-color: rgba(74, 40, 24, 0.5);
