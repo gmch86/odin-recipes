@@ -24,9 +24,12 @@
 }
 
 .recipe-image-container .recipe-img {
-  min-height: 200px;
+  height: 300px;
+  width: 300px;
+  min-height: 300px;
   min-width: 300px;
   background-color: silver;
+  object-fit: cover;
 }
 
 .recipe-image-container .recipe-banner,
@@ -80,7 +83,7 @@
 .ingredients-list {
   position: relative;
   width: 300px;
-  font-size: 1em;
+  font-size: 0.9em;
   left: -5ch;
   list-style-position: inside;
 }
@@ -142,7 +145,7 @@
 .return-to-home-link.bottom {
   display: block;
   width: max-content;
-  margin: 0 auto;
+  margin: 2em auto 0;
   font-size: 1.2em;
 }
 
