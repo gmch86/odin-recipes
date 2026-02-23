@@ -12,192 +12,12 @@ section.recipes {
   font-size: 1.6em;
 }
 
-.recipe-card-list-container {
-  position: relative;
-}
-
-.carousel-left,
-.carousel-right {
-  all: unset;
-  display: inline-block;
-  color: #392012;
-  cursor: pointer;
-  font-size: 0;
-  vertical-align: middle;
-}
-
-.carousel-left:hover,
-.carousel-right:hover {
-  filter: brightness(2) saturate(0.5);
-}
-
-.carousel-left,
-.carousel-right {
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  background-color: transparent;
-}
-
-.carousel-left {
-  border-right: 15px solid #392012;
-}
-
-.carousel-right {
-  border-left: 15px solid #392012;
-}
-
-ul.recipe-card-list {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  vertical-align: middle;
-}
-
-.recipe-card-list li {
-  position: relative;
-  display: inline-block;
-  list-style: none;
-  width: 164px;
-  height: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  margin: 4px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: rgba(74, 40, 24, 0.2);
-}
-
-.recipe-card-list li:hover {
-  transform: scale(1.01);
-  filter: brightness(1.02) drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.2));
-  transition:
-    transform 0.1s ease-out,
-    filter 0.1s ease-out;
-  cursor: pointer;
-}
-
 .recipe-img {
   display: block;
   background-color: silver;
+  width: 100%;
   height: 120px;
   object-fit: cover;
-}
-
-.recipe-card-list .recipe-banner {
-  text-align: center;
-  align-content: center;
-  background-color: #860000;
-  color: white;
-  height: 3lh;
-  font-size: 0.7em;
-  overflow: hidden;
-}
-
-.recipe-info {
-  text-align: center;
-  align-content: center;
-  padding: 0.7em 0.4em;
-  font-size: 0.7em;
-  height: 2.5lh;
-}
-
-.recipe-info .time-to-cook:before {
-  display: inline-block;
-  content: "";
-  width: 1.4em;
-  height: 1.4em;
-  background-color: #392012;
-  mask-image: url("images/clock.svg");
-  mask-size: cover;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  vertical-align: middle;
-  margin: 0 0.3em 0 0;
-}
-
-.recipe-info .serve-amount:before {
-  display: inline-block;
-  content: "";
-  width: 1.4em;
-  height: 1.4em;
-  background-color: #392012;
-  mask-image: url("images/hand-meal.svg");
-  mask-size: cover;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  vertical-align: middle;
-  margin: 0 0.3em 0 0;
-}
-
-.recipe-card-list .recipe-img {
-  min-width: 100%;
-  min-height: 100px;
-}
-
-section.meal-of-the-week {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 100px;
-}
-
-.meal-of-the-week-container {
-  width: 100%;
-  height: max-content;
-  margin: 0 auto;
-  padding: 14px;
-  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
-  border-radius: 12px;
-  border-style: double;
-  border-width: 6px;
-  border-color: rgba(74, 40, 24, 0.2);
-}
-
-.meal-of-the-week-container .recipe-img {
-  min-width: 100%;
-  min-height: 350px;
-  border-radius: 12px;
-  object-position: 0 30%;
-}
-
-.meal-of-the-week-container .recipe-banner {
-  width: max-content;
-  margin: 0 auto;
-  margin-top: 10px;
-}
-
-.meal-of-the-week-container .recipe-banner span {
-  position: relative;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.meal-of-the-week-container .recipe-banner span:hover {
-  cursor: pointer;
-}
-
-.meal-of-the-week-container .recipe-banner span:hover::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  height: 0.2ch;
-  left: 0;
-  border-radius: 2px;
-  background: #39201299;
-  background: linear-gradient(
-    90deg,
-    rgba(57, 32, 18, 0) 0%,
-    rgba(57, 32, 18, 0.6) 40%,
-    rgba(57, 32, 18, 0.6) 60%,
-    rgba(57, 32, 18, 0) 100%
-  );
-}
-
-.meal-of-the-week-container .recipe-info {
-  font-size: 0.8em;
 }
 
 .recipe-card-list li,
@@ -207,4 +27,149 @@ section.meal-of-the-week {
     linear-gradient(rgba(255, 247, 237, 0.15)), url("images/FG_TEXTURE.png");
   background-repeat: repeat;
   overflow: hidden;
+}
+
+.recipe-card-list-container {
+  position: relative;
+
+  & button.carousel-left,
+  & button.carousel-right {
+    padding: 0;
+    background: none;
+    color: #392012;
+    font-size: 0;
+    vertical-align: middle;
+    border: none;
+    cursor: pointer;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+
+  & button.carousel-left {
+    border-right: 20px solid #392012;
+  }
+  & button.carousel-right {
+    border-left: 20px solid #392012;
+  }
+
+  & button.carousel-left:hover,
+  & button.carousel-right:hover {
+    filter: brightness(2) saturate(0.5);
+  }
+}
+
+ul.recipe-card-list {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+
+  & li {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    width: 164px;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 4px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(74, 40, 24, 0.2);
+
+    &:hover {
+      transform: scale(1.01);
+      filter: brightness(1.02) drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.2));
+      transition:
+        transform 0.1s ease-out,
+        filter 0.1s ease-out;
+      cursor: pointer;
+    }
+
+    & .recipe-banner {
+      text-align: center;
+      align-content: center;
+      background-color: #860000;
+      color: white;
+      height: 3lh;
+      font-size: 0.7em;
+      overflow: hidden;
+    }
+  }
+}
+
+.recipe-info {
+  text-align: center;
+  align-content: center;
+  padding: 0.7em 0.4em;
+  font-size: 0.7em;
+  height: 2.5lh;
+
+  & .time-to-cook:before {
+    mask-image: url("images/clock.svg");
+  }
+
+  & .serve-amount:before {
+    mask-image: url("images/hand-meal.svg");
+  }
+
+  & .time-to-cook:before,
+  & .serve-amount:before {
+    display: inline-block;
+    content: "";
+    width: 1.4em;
+    height: 1.4em;
+    background-color: #392012;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    vertical-align: middle;
+    margin: 0 0.3em 0 0;
+  }
+}
+
+section.meal-of-the-week {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 100px;
+
+  & .meal-of-the-week-container {
+    width: 100%;
+    height: max-content;
+    margin: 0 auto;
+    padding: 14px;
+    filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.2));
+    border-radius: 12px;
+    border-style: double;
+    border-width: 6px;
+    border-color: rgba(74, 40, 24, 0.2);
+
+    & .recipe-img {
+      min-width: 100%;
+      min-height: 350px;
+      border-radius: 12px;
+      object-position: 0 30%;
+    }
+
+    & .recipe-banner {
+      width: max-content;
+      margin: 0 auto;
+      margin-top: 8px;
+
+      & a {
+        position: relative;
+        font-size: 1.2em;
+        font-weight: bold;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    & .recipe-info {
+      font-size: 0.8em;
+      margin-top: 0.3em;
+    }
+  }
 }

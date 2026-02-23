@@ -10,128 +10,144 @@
 }
 
 .ingredients-section {
+  position: relative;
   text-align: center;
   height: max-content;
+
+  /* Divider */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    border-left: 2px solid;
+    border-color: rgba(74, 40, 24, 0.5);
+  }
+
+  & .recipe-image-container {
+    display: inline-block;
+    position: relative;
+    right: 10%;
+    vertical-align: middle;
+    width: max-content;
+    height: min-content;
+
+    & .recipe-img {
+      height: 300px;
+      width: 300px;
+      min-height: 300px;
+      min-width: 300px;
+      background-color: silver;
+      object-fit: cover;
+    }
+
+    & .recipe-banner,
+    & .recipe-info {
+      text-align: center;
+      margin-top: 0.8em;
+      font-size: 0.9em;
+    }
+
+    & .recipe-info {
+      & .time-to-cook:before {
+        mask-image: url("images/clock.svg");
+      }
+
+      & .serve-amount:before {
+        mask-image: url("images/hand-meal.svg");
+      }
+
+      & .time-to-cook:before,
+      & .serve-amount:before {
+        display: inline-block;
+        content: "";
+        width: 1.4em;
+        height: 1.4em;
+        background-color: #392012;
+        mask-size: cover;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        vertical-align: middle;
+        margin: 0 0.3em 0 0;
+      }
+    }
+  }
+
+  & .ingredients-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: min-content;
+    margin-right: -4em;
+
+    & .ingredients-heading {
+      position: relative;
+      left: 30%;
+      color: white;
+      background-color: #860000;
+      padding: 0.3em 2em;
+      margin: 0;
+      font-size: 1.1em;
+      font-weight: lighter;
+    }
+
+    & ul.ingredients-list {
+      position: relative;
+      width: 300px;
+      font-size: 0.9em;
+      left: -5ch;
+      list-style-position: inside;
+
+      & li {
+        position: relative;
+        margin: 1ch 0;
+        list-style: none;
+        line-height: 1em;
+        text-align: left;
+        padding-left: 4ch;
+
+        &::before {
+          position: absolute;
+          content: "•";
+          font-size: 5ch;
+          left: 0;
+          top: -0.1lh;
+          color: #872d2d;
+        }
+      }
+    }
+  }
 }
 
-.recipe-image-container {
-  display: inline-block;
-  position: relative;
-  right: 10%;
-  vertical-align: middle;
-  width: max-content;
-  height: min-content;
-}
+.instructions-container {
+  & .instructions-heading {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.recipe-image-container .recipe-img {
-  height: 300px;
-  width: 300px;
-  min-height: 300px;
-  min-width: 300px;
-  background-color: silver;
-  object-fit: cover;
-}
+  & ol.instructions-list {
+    list-style: none;
+    counter-reset: step-counter;
+    padding: 0;
+    margin-top: 1.6em;
 
-.recipe-image-container .recipe-banner,
-.recipe-image-container .recipe-info {
-  text-align: center;
-  margin-top: 0.8em;
-  font-size: 0.9em;
-}
+    & li {
+      position: relative;
+      counter-increment: step-counter;
+      margin: 1ch 0;
+      padding-left: 4.5em;
 
-.recipe-info .time-to-cook:before {
-  mask-image: url("images/clock.svg");
-}
-
-.recipe-info .serve-amount:before {
-  mask-image: url("images/hand-meal.svg");
-}
-
-.recipe-info .time-to-cook:before,
-.recipe-info .serve-amount:before {
-  display: inline-block;
-  content: "";
-  width: 1.4em;
-  height: 1.4em;
-  background-color: #392012;
-  mask-size: cover;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  vertical-align: middle;
-  margin: 0 0.3em 0 0;
-}
-
-.ingredients-container {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  height: min-content;
-  margin-right: -4em;
-}
-
-.ingredients-heading {
-  position: relative;
-  left: 30%;
-  color: white;
-  background-color: #860000;
-  padding: 0.3em 2em;
-  margin: 0;
-  font-size: 1.1em;
-  font-weight: lighter;
-}
-
-.ingredients-list {
-  position: relative;
-  width: 300px;
-  font-size: 0.9em;
-  left: -5ch;
-  list-style-position: inside;
-}
-
-.ingredients-list li {
-  position: relative;
-  margin: 1ch 0;
-  list-style: none;
-  line-height: 1em;
-  text-align: left;
-  padding-left: 4ch;
-}
-
-.ingredients-list li::before {
-  position: absolute;
-  content: "•";
-  font-size: 5ch;
-  left: 0;
-  top: -0.1lh;
-  color: #872d2d;
-}
-
-.instructions-heading {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.instructions-list {
-  list-style: none;
-  counter-reset: step-counter;
-  padding: 0;
-  margin-top: 1.6em;
-}
-
-.instructions-list li {
-  position: relative;
-  counter-increment: step-counter;
-  margin: 1ch 0;
-  padding-left: 4.5em;
-}
-
-.instructions-list li::before {
-  position: absolute;
-  content: "Step " counter(step-counter) ".";
-  left: 0;
-  color: #860000;
-  font-size: 1.1em;
-  font-weight: bold;
+      &::before {
+        position: absolute;
+        content: "Step " counter(step-counter) ".";
+        left: 0;
+        color: #860000;
+        font-size: 1.1em;
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 .return-to-home-link {
@@ -140,39 +156,25 @@
   margin-left: 1em;
   font-size: 1em;
   font-weight: bold;
-}
 
-.return-to-home-link.bottom {
-  display: block;
-  width: max-content;
-  margin: 2em auto 0;
-  font-size: 1.2em;
-}
+  &.bottom {
+    display: block;
+    width: max-content;
+    margin: 2em auto 0;
+    font-size: 1.2em;
+  }
 
-.return-to-home-link.top::before,
-.return-to-home-link.bottom::before {
-  position: absolute;
-  content: "";
-  width: 0.4em;
-  height: 0.4em;
-  top: calc(100% - 1em);
-  right: calc(100% + 0.5ch);
-  border-bottom: 3px solid;
-  border-left: 3px solid;
-  transform: rotate(45deg);
-}
-
-/* Dividers */
-.ingredients-section {
-  position: relative;
-}
-
-.ingredients-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  height: 100%;
-  border-left: 2px solid;
-  border-color: rgba(74, 40, 24, 0.5);
+  /* Back icon */
+  &.top::before,
+  &.bottom::before {
+    position: absolute;
+    content: "";
+    width: 0.4em;
+    height: 0.4em;
+    top: calc(100% - 1em);
+    right: calc(100% + 0.5ch);
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    transform: rotate(45deg);
+  }
 }
