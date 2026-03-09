@@ -20,7 +20,7 @@ section.recipes {
   object-fit: cover;
 }
 
-ul.recipe-card-list li,
+ul.recipe-card-list li a,
 .meal-of-the-week-container {
   background-color: #decdba;
   background-image:
@@ -37,29 +37,35 @@ ul.recipe-card-list {
 
   anchor-name: --my-carousel;
   width: 580px;
-  padding: calc(var(--gap-size) - 2px);
-  gap: var(--gap-size);
+  padding: 0 4px;
   overflow: hidden;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: var(--gap-size);
 
   & li {
     list-style-type: none;
-    border-radius: 8px;
-    overflow: hidden;
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgba(74, 40, 24, 0.2);
-
-    flex: 0 0 calc((100% - (var(--gap-size) * 2)) / 3);
+    padding: 10px 4px;
+    background: none;
     scroll-snap-align: center;
+    flex: 0 0 calc((100% - (var(--gap-size) * 2)) / 3);
 
-    &:hover {
-      transform: scale(1.01);
-      filter: brightness(1.02) drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.2));
-      transition:
-        transform 0.1s ease-out,
-        filter 0.1s ease-out;
-      cursor: pointer;
+    & a {
+      display: block;
+      border-radius: 8px;
+      overflow: hidden;
+      border-style: solid;
+      border-width: 2px;
+      border-color: rgba(74, 40, 24, 0.2);
+
+      &:hover {
+        transform: scale(1.01);
+        filter: brightness(1.02) drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.2));
+        transition:
+          transform 0.1s ease-out,
+          filter 0.1s ease-out;
+        cursor: pointer;
+      }
     }
 
     & .recipe-banner {
