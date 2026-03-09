@@ -32,28 +32,20 @@ ul.recipe-card-list li,
 ul.recipe-card-list {
   --gap-size: 4px;
 
-  /* display: inline-block; */
   display: flex;
-  /* padding: 0; */
   margin: 0;
-  /* vertical-align: middle; */
 
   anchor-name: --my-carousel;
-  width: 600px;
-  padding: var(--gap-size);
+  width: 580px;
+  padding: calc(var(--gap-size) - 2px);
   gap: var(--gap-size);
   overflow: hidden;
   scroll-snap-type: x mandatory;
 
   & li {
-    /* position: relative; */
-    /* display: inline-block; */
     list-style-type: none;
-    /* width: 164px; */
-    /* height: 100%; */
     border-radius: 8px;
     overflow: hidden;
-    /* margin: 4px; */
     border-style: solid;
     border-width: 2px;
     border-color: rgba(74, 40, 24, 0.2);
@@ -121,38 +113,6 @@ ul.recipe-card-list {
   &::scroll-button(right):disabled {
     filter: opacity(0.5);
     cursor: unset;
-  }
-}
-
-/* Carousel buttons */
-.recipe-card-list-container {
-  position: relative;
-
-  & button.carousel-left,
-  & button.carousel-right {
-    padding: 0;
-    background: none;
-    color: #392012;
-    font-size: 0;
-    vertical-align: middle;
-    border: none;
-    cursor: pointer;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-
-    display: none;
-  }
-
-  & button.carousel-left {
-    border-right: 20px solid #392012;
-  }
-  & button.carousel-right {
-    border-left: 20px solid #392012;
-  }
-
-  & button.carousel-left:hover,
-  & button.carousel-right:hover {
-    filter: brightness(2) saturate(0.5);
   }
 }
 
