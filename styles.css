@@ -72,6 +72,27 @@ header {
   margin: 0 auto;
 }
 
+footer {
+  margin-top: auto;
+  text-align: center;
+  margin: 0.6em;
+  color: rgb(200, 200, 200);
+  font-size: small;
+
+  & a {
+    vertical-align: middle;
+    margin: 0.4em;
+
+    & svg {
+      fill: rgb(200, 200, 200);
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
 .main-navbar {
   & ul {
     padding: 0;
