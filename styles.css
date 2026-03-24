@@ -8,6 +8,7 @@ body {
   background-image: url("images/BG_TEXTURE.png");
   background-repeat: repeat;
   height: 100vh;
+  min-width: max-content;
   font-family:
     Lucida Grande,
     Lucida Sans Unicode,
@@ -73,11 +74,11 @@ header {
 }
 
 footer {
-  margin-top: auto;
   text-align: center;
   margin: 0.6em;
   color: rgb(200, 200, 200);
   font-size: small;
+  width: 100%;
 
   & a {
     vertical-align: middle;
