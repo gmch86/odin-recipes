@@ -32,28 +32,28 @@ ul.recipe-card-list li a,
 ul.recipe-card-list {
   --gap-size: 4px;
 
-  display: flex;
-  margin: 0;
-
   anchor-name: --my-carousel;
   width: 580px;
-  padding: 0 4px;
-  overflow: hidden;
+  padding: 0;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  gap: var(--gap-size);
+  white-space: nowrap;
+  padding: calc(var(--gap-size) * 2) var(--gap-size);
+  overflow: hidden;
+  font-size: 0; /* Collapsing newlines between list elements | Step 1*/
 
   & li {
+    display: inline-block;
     list-style-type: none;
-    padding: 10px 4px;
     background: none;
     scroll-snap-align: center;
-    flex: 0 0 calc((100% - (var(--gap-size) * 2)) / 3);
+    margin: var(--gap-size);
+    width: calc((100% / 3) - (var(--gap-size) * 2));
+    font-size: initial; /* Collapsing newlines between list elements | Step 2 */
 
     & a {
       display: block;
       border-radius: 8px;
-      overflow: hidden;
       border-style: solid;
       border-width: 2px;
       border-color: rgba(74, 40, 24, 0.2);
