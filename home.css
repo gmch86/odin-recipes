@@ -38,7 +38,7 @@ ul.recipe-card-list {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   white-space: nowrap;
-  padding: calc(var(--gap-size) * 2) var(--gap-size);
+  padding: calc(var(--gap-size) * 2) calc(var(--gap-size) - 1px);
   overflow: hidden;
   font-size: 0; /* Collapsing newlines between list elements | Step 1*/
 
@@ -48,7 +48,7 @@ ul.recipe-card-list {
     background: none;
     scroll-snap-align: center;
     margin: var(--gap-size);
-    width: calc((100% / 3) - (var(--gap-size) * 2));
+    width: calc(((100% / 3) - (var(--gap-size) * 2)));
     font-size: initial; /* Collapsing newlines between list elements | Step 2 */
 
     & a {
