@@ -105,10 +105,12 @@ footer {
     font-size: 0; /* Remove whitespace */
 
     & li {
+      position: relative;
       display: inline-block;
       list-style: none;
       padding: 0;
       margin: 0;
+      width: 100px;
       font-size: initial; /* Restore font-size with removed whitespace */
 
       & a {
@@ -121,16 +123,22 @@ footer {
       }
 
       &::before {
-        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
         content: "";
-        mask-image: url("images/diamond.svg");
-        mask-size: contain;
-        mask-repeat: no-repeat;
-        mask-position: center;
         width: 8px;
         height: 8px;
         background-color: #4a2818;
-        transform: translateY(-25%);
+        -webkit-mask-image: url("images/diamond.svg");
+        mask-image: url("images/diamond.svg");
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
       }
 
       /* Remove seperator from before first list element */
@@ -194,8 +202,11 @@ footer {
     display: inline-block;
     width: 150px;
     height: 100%;
+    -webkit-mask-size: contain;
     mask-size: contain;
+    -webkit-mask-position: center;
     mask-position: center;
+    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
   }
 }
@@ -229,8 +240,11 @@ footer {
   &.right.dropshadow::after {
     position: absolute;
     content: "";
+    -webkit-mask-size: contain;
     mask-size: contain;
+    -webkit-mask-position: center;
     mask-position: center;
+    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     width: 200px;
     height: 100%;

@@ -51,10 +51,12 @@
 
     & .recipe-info {
       & .time-to-cook:before {
+        -webkit-mask-image: url("images/clock.svg");
         mask-image: url("images/clock.svg");
       }
 
       & .serve-amount:before {
+        -webkit-mask-image: url("images/hand-meal.svg");
         mask-image: url("images/hand-meal.svg");
       }
 
@@ -65,8 +67,11 @@
         width: 1.4em;
         height: 1.4em;
         background-color: #392012;
+        -webkit-mask-size: cover;
         mask-size: cover;
+        -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
+        -webkit-mask-position: center;
         mask-position: center;
         vertical-align: middle;
         margin: 0 0.3em 0 0;

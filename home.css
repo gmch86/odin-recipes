@@ -1,4 +1,11 @@
 /* INDEX.HTML */
+main p.introduction {
+  justify-self: center;
+  text-align: center;
+  margin: 20px 40px;
+  padding: 0 50px;
+}
+
 section.recipes {
   margin: 0 auto;
   width: max-content;
@@ -130,10 +137,12 @@ ul.recipe-card-list {
   height: 2.5lh;
 
   & .time-to-cook:before {
+    -webkit-mask-image: url("images/clock.svg");
     mask-image: url("images/clock.svg");
   }
 
   & .serve-amount:before {
+    -webkit-mask-image: url("images/hand-meal.svg");
     mask-image: url("images/hand-meal.svg");
   }
 
@@ -144,8 +153,11 @@ ul.recipe-card-list {
     width: 1.4em;
     height: 1.4em;
     background-color: #392012;
+    -webkit-mask-size: cover;
     mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+    -webkit-mask-position: center;
     mask-position: center;
     vertical-align: middle;
     margin: 0 0.3em 0 0;
